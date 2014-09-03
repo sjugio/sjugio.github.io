@@ -2,6 +2,9 @@ var gulp        = require('gulp')
 var template    = require('gulp-template')
 var frontmatter = require('gulp-front-matter')
 var markdown    = require('gulp-markdown')
+var es          = require('event-stream')
+var fs          = require('fs')
+var mustache    = require('mustache')
 
 var paths = {
     src       : 'src',
@@ -15,5 +18,15 @@ gulp.task('default', function () {
             property: 'meta'
         }))
         .pipe(markdown())
+        .pipe(es.map(function(file, cb) {
+            var template  = String(fs.readFileSync('templates/'+file.meta.template+'.html'));
+            var html = mustache.render(template, {
+                page: file.meta,
+                content: String(file.contents)
+            });
+            file.contents = new Buffer(html);
+            console.log(file.meta)
+            cb(null, file);
+        }))
         .pipe(gulp.dest('blog'));
 });

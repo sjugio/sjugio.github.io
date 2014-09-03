@@ -1,5 +1,5 @@
 ---
-layout: post
+template: blog
 title: Blogging Like a Hacker
 ---
 
