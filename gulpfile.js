@@ -1,16 +1,9 @@
 var gulp        = require('gulp')
-var template    = require('gulp-template')
 var frontmatter = require('gulp-front-matter')
 var markdown    = require('gulp-markdown')
 var es          = require('event-stream')
 var fs          = require('fs')
 var mustache    = require('mustache')
-
-var paths = {
-    src       : 'src',
-    templates : 'templates',
-    styles    : 'styles'
-}
 
 gulp.task('build', function () {
     return gulp.src('src/*.md')
