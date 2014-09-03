@@ -14,6 +14,18 @@ body {
     box-shadow          : inset #eeeeef 0px 100px 50px;
 }
 
+#container>a {
+    height              : 130px;
+}
+
+#container>a>img {
+    -webkit-transition  : all 0.1s ease-in-out
+}
+
+#container>a:hover>img {
+    -webkit-transform   : scale(1.075);
+}
+
 #logo {
     height      : 100px;
     width       : 211px;
@@ -71,12 +83,18 @@ h1 {
     display     : flex;
     flex        : auto;
     align-items : center;
-    min-height  : 316px
+    min-height  : 316px;
+    width       : 1024px;
+    margin-left : -128px;
+}
+
+.feature-container a {
+    flex    : auto
 }
 
 .feature {
     cursor              : pointer;
-    width               : 256px;
+    flex                : auto;
     height              : 256px;
     text-align          : center;
     font-size           : 30px;
@@ -84,16 +102,18 @@ h1 {
 }
 
 .feature-image:hover {
-    -webkit-transform   : scale(1)
+    -webkit-transform   : scale(1);
+    -webkit-filter      : saturate(1)
 }
 
 .feature-image {
     width               : 200px;
     height              : 200px;
-    margin              : 0px 28px 28px 28px;
+    margin              : 0px auto 28px auto;
     background-image    : url(../graphics/sprite.png);
     -webkit-transform   : scale(0.9);
-    -webkit-transition  : all 0.1s ease-in-out
+    -webkit-transition  : all 0.1s ease-in-out;
+    -webkit-filter      : saturate(0)
 }
 
 .events {
@@ -110,5 +130,88 @@ h1 {
 
 a {
     text-decoration : none;
-    color           : #77777f
+    color           : #77777f;
+}
+
+#newsletter {
+    cursor  : pointer
+}
+
+.newsletterInput {
+    font-size           : 30px;
+    font-weight         : 500;
+    border              : solid 1px #ffffff;
+    padding             : 0px 4px 0px 4px;
+    margin              : 0px;
+    border-radius       : 3px;
+    width               : 246px;
+    font-family         : "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-top          : -6px;
+    text-align          : center;
+    color               : #77777f;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.after, .newsletterInput.finally {
+    border              : solid 1px #bbbbbf;
+}
+
+.newsletterInput::-webkit-input-placeholder {
+    color               : #77777f;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput:-moz-placeholder {
+    color               : #77777f;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput::-moz-placeholder {
+    color               : #77777f;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput:-ms-input-placeholder {
+    color               : #77777f;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.after::-webkit-input-placeholder {
+    color               : #ffffff;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.after:-moz-placeholder {
+    color               : #ffffff;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.after::-moz-placeholder {
+    color               : #ffffff;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.after:-ms-input-placeholder {
+    color               : #ffffff;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.finally::-webkit-input-placeholder {
+    color               : #bbbbbf;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.finally:-moz-placeholder {
+    color               : #bbbbbf;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.finally::-moz-placeholder {
+    color               : #bbbbbf;
+    -webkit-transition  : all 0.25s ease-in-out
+}
+
+.newsletterInput.finally:-ms-input-placeholder {
+    color               : #bbbbbf;
+    -webkit-transition  : all 0.5s ease-in-out
 }
