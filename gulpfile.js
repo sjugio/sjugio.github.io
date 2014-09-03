@@ -23,7 +23,7 @@ gulp.task('build-blog-index',function () {
                 bloglist.push({
                     title   : file.meta.title,
                     preview : file.contents,
-                    link    : 'blog/'+link
+                    link    : link
                 })
             }
             cb(null, file);
