@@ -6,6 +6,9 @@ var es          = require('event-stream')
 var fs          = require('fs')
 var mustache    = require('mustache')
 
+var header      = String(fs.readFileSync('templates/header.html'))
+var footer      = String(fs.readFileSync('templates/footer.html'))
+
 gulp.task('build-blog-index',function () {
     var bloglist = []
     return gulp.src('src/*.md')
@@ -27,6 +30,9 @@ gulp.task('build-blog-index',function () {
             var template  = String(fs.readFileSync('templates/blogindex.html'));
             var html = mustache.render(template, {
                 blogs : bloglist
+            },{
+                header : header,
+                footer : footer
             });
             file.contents = new Buffer(html);
             cb(null, file);
@@ -45,6 +51,9 @@ gulp.task('build-blog', function () {
             var html = mustache.render(template, {
                 page: file.meta,
                 content: String(file.contents)
+            },{
+                header : header,
+                footer : footer
             });
             file.contents = new Buffer(html);
             cb(null, file);
