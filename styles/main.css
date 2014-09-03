@@ -75,9 +75,40 @@ h1 {
 }
 
 .feature {
-    width       : 256px;
-    height      : 256px;
-    text-align  : center;
-    font-size   : 30px;
-    font-weight : 500
+    cursor              : pointer;
+    width               : 256px;
+    height              : 256px;
+    text-align          : center;
+    font-size           : 30px;
+    font-weight         : 500;
+}
+
+.feature-image:hover {
+    -webkit-transform   : scale(1)
+}
+
+.feature-image {
+    width               : 200px;
+    height              : 200px;
+    margin              : 0px 28px 28px 28px;
+    background-image    : url(../graphics/sprite.png);
+    -webkit-transform   : scale(0.9);
+    -webkit-transition  : all 0.1s ease-in-out
+}
+
+.events {
+    background-position : 0px 0px
+}
+
+.blog {
+    background-position : 400px 0px
+}
+
+.newsletter {
+    background-position : 200px 0px
+}
+
+a {
+    text-decoration : none;
+    color           : #77777f
 }
