@@ -19,10 +19,14 @@
   "homepage": "https://github.com/sjugio/sjugio.github.io",
   "devDependencies": {
     "event-stream": "^3.1.7",
+    "express": "^4.8.7",
     "gulp": "^3.8.7",
     "gulp-front-matter": "^1.0.0",
     "gulp-markdown": "^1.0.0",
     "gulp-template": "^1.0.1",
-    "mustache": "^0.8.2"
+    "mustache": "^0.8.2",
+    "path": "^0.4.9",
+    "tiny-lr-fork": "0.0.5",
+    "gaze": "^0.5.1"
   }
 }

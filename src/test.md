@@ -3,6 +3,6 @@ template: blog
 title: Blogging Like a Hacker
 ---
 
-# lol
+# En artikkel
 
 Yolo!

@@ -12,7 +12,7 @@ var paths = {
     styles    : 'styles'
 }
 
-gulp.task('default', function () {
+gulp.task('build', function () {
     return gulp.src('src/*.md')
         .pipe(frontmatter({
             property: 'meta'
@@ -29,3 +29,7 @@ gulp.task('default', function () {
         }))
         .pipe(gulp.dest('blog'));
 });
+
+gulp.task('default', ['build'])
+
+module.exports = gulp
