@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sjugio/sjugio.github.io",
   "devDependencies": {
     "gulp": "^3.8.7",
+    "gulp-front-matter": "^1.0.0",
     "gulp-markdown": "^1.0.0",
     "gulp-template": "^1.0.1"
   }
