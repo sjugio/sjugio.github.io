@@ -1,0 +1,32 @@
+{
+  "name": "sjug.io",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Sjug.io website",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjugio/sjugio.github.io.git"
+  },
+  "author": "Asbjorn Enge <asbjorn@hanafjedle.net>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/sjugio/sjugio.github.io/issues"
+  },
+  "homepage": "https://github.com/sjugio/sjugio.github.io",
+  "devDependencies": {
+    "event-stream": "^3.1.7",
+    "express": "^4.8.7",
+    "gulp": "^3.8.7",
+    "gulp-front-matter": "^1.0.0",
+    "gulp-markdown": "^1.0.0",
+    "gulp-template": "^1.0.1",
+    "mustache": "^0.8.2",
+    "path": "^0.4.9",
+    "tiny-lr-fork": "0.0.5",
+    "gaze": "^0.5.1"
+  }
+}
