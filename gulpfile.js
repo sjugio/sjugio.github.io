@@ -25,7 +25,6 @@ gulp.task('default', function () {
                 content: String(file.contents)
             });
             file.contents = new Buffer(html);
-            console.log(file.meta)
             cb(null, file);
         }))
         .pipe(gulp.dest('blog'));
