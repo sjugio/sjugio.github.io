@@ -17,10 +17,13 @@ gulp.task('build-blog-index',function () {
         }))
         .pipe(markdown())
         .pipe(es.map(function(file, cb) {
+            var path = file.path.split('/')
+            var link = path[path.length-1]
             if (!file.meta.draft) {
                 bloglist.push({
                     title   : file.meta.title,
-                    preview : file.contents
+                    preview : file.contents,
+                    link    : 'blog/'+link
                 })
             }
             cb(null, file);
