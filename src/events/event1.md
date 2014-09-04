@@ -1,9 +1,9 @@
 ---
 template: blog
-title: Blogging Like a Hacker
+title: Event 1
 draft: false
 ---
 
-# En artikkel
+# Event 1
 
 Yolo!

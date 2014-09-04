@@ -44,6 +44,8 @@ var template = function (template, data) {
     })
 }
 
+// BLOG
+
 gulp.task('build-blog-index',function () {
     var bloglist = []
     return gulp.src('src/blog/*.md')
@@ -67,7 +69,32 @@ gulp.task('build-blog', function () {
         .pipe(gulp.dest('blog'));
 });
 
-gulp.task('build', ['build-blog','build-blog-index'])
+// EVENTS
+
+gulp.task('build-events-index',function () {
+    var bloglist = []
+    return gulp.src('src/events/*.md')
+        .pipe(frontmatter({
+            property: 'meta'
+        }))
+        .pipe(markdown())
+        .pipe(collectChildrenToPublish(bloglist))
+        .pipe(concat('index.html'))
+        .pipe(template('templates/event_index.html', { blogs : bloglist }))
+        .pipe(gulp.dest('events'))
+})
+
+gulp.task('build-events', function () {
+    return gulp.src('src/events/*.md')
+        .pipe(frontmatter({
+            property: 'meta'
+        }))
+        .pipe(markdown())
+        .pipe(template('templates/event.html', { page : 'file.meta', content : 'file.contents' }))
+        .pipe(gulp.dest('events'));
+});
+
+gulp.task('build', ['build-blog','build-blog-index','build-events', 'build-events-index'])
 gulp.task('default', ['build'])
 
 module.exports = gulp
