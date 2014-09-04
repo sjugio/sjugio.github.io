@@ -1,0 +1,9 @@
+{{>header}}
+    <h1>Blog list</h1>
+    <div id="blogs">
+        {{#blogs}}
+        <a href="{{&link}}">{{title}}</a>
+        <p>{{{preview}}}</p>
+        {{/blogs}}
+    </div>
+{{>footer}}
