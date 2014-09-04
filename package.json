@@ -26,6 +26,7 @@
     "gulp-front-matter": "^1.0.0",
     "gulp-markdown": "^1.0.0",
     "gulp-template": "^1.0.1",
+    "lodash": "^2.4.1",
     "mustache": "^0.8.2",
     "path": "^0.4.9",
     "tiny-lr-fork": "0.0.5"
