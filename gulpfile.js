@@ -46,19 +46,19 @@ var template = function (template, data) {
 
 gulp.task('build-blog-index',function () {
     var bloglist = []
-    return gulp.src('src/*.md')
+    return gulp.src('src/blog/*.md')
         .pipe(frontmatter({
             property: 'meta'
         }))
         .pipe(markdown())
         .pipe(collectChildrenToPublish(bloglist))
         .pipe(concat('index.html'))
-        .pipe(template('templates/blogindex.html', { blogs : bloglist }))
+        .pipe(template('templates/blog_index.html', { blogs : bloglist }))
         .pipe(gulp.dest('blog'))
 })
 
 gulp.task('build-blog', function () {
-    return gulp.src('src/*.md')
+    return gulp.src('src/blog/*.md')
         .pipe(frontmatter({
             property: 'meta'
         }))
